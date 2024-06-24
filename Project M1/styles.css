@@ -1,75 +1,128 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f9; /* Light background for contrast */
+    color: #333;
 }
 
+/* Header and Navigation */
 header, nav {
-    background-color: #333;
+    background: linear-gradient(90deg, #ff8a00, #e52e71); /* Gradient background */
     color: white;
-    padding: 1rem;
+    padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 nav a {
     color: white;
     margin: 0 1rem;
     text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
+nav a:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+
+/* Main Content */
 main {
-    padding: 1rem;
+    padding: 2rem;
 }
 
+/* Headings */
 h1, h2 {
     color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
+/* Featured Products and Product List */
 #featured-products, #product-list {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center; /* Center the product list */
 }
 
 .product {
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
     padding: 1rem;
     width: calc(25% - 2rem);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: white; /* White background for product cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transformations */
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
 }
 
 .product img {
     max-width: 100%;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ddd; /* Consistent with card border */
     margin-bottom: 1rem;
+    border-radius: 5px; /* Slightly rounded image corners */
 }
 
+/* Form Styles */
 form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff; /* White form background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 400px;
+    margin: 2rem auto; /* Center the form */
 }
 
 form label {
     font-weight: bold;
+    color: #e52e71; /* Accent color for labels */
 }
 
 form input {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
+    padding: 0.75rem; /* Slightly increased padding */
+    border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 1rem; /* Increased font size for better readability */
 }
 
 form button {
-    padding: 0.5rem;
+    padding: 0.75rem;
     border: none;
     border-radius: 5px;
-    background-color: #333;
+    background-color: #ff8a00; /* Primary button color */
     color: white;
+    font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background transition */
 }
 
 form button:hover {
-    background-color: #555;
+    background-color: #e52e71; /* Accent color on hover */
+}
+
+/* Additional Styles for Responsiveness */
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: calc(100% - 2rem);
+    }
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
 }
